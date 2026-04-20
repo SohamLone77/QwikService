@@ -23,6 +23,7 @@ go.work
 # Mac System files
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # IDE - VSCode  
 .vscode/
