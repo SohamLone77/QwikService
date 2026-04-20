@@ -1,175 +1,94 @@
 # UrbanClapClone
 
-<b>Course</b>: CEN5035 - Software Engineering <br>
-<b>Institute</b>: Unviersity of Florida <br>
-<b>Semester</b>: Spring 2022 <br>
-<b>Instructor</b>: Dr. Alin Dobra <br>
-<b>Team</b>: 
-* Prateek Kumar Goel ([Github](https://github.com/pkgprateek)) - Both
-* Rishabh Jaiswal ([Github](https://github.com/rsj-rishabh)) - Both
-* Raghunandhan Vaidy ([Github](https://github.com/Skillic-Kaiser)) - Both
-* Madhuri Uppu ([Github](https://github.com/MadhuriUppu)) - Both
+## Project Overview
+UrbanClapPro is a web application that aggregates home utility services such as beauty, electrical maintenance, home cleaning, and pest control. Users can browse services, book appointments at convenient times, and manage their bookings in one place.
 
-## Project Description:
-The <strong>“UrbanClapPro"</strong> web application aims to aggregate utility services such as beauty, electrical mainatainance, home cleaning, pest control etc. The application would enable the end-user to select their preferred service, book an appointment at a convenient time, pay the resultant charge and give feedback. The primary criterion of the web application would facility easy calenter and time slot booking to book the services according to your time and availability. The application aims to be a one stop shop that caters to all the utility needs for the end user. Out product promises easy bookign and cancellation without extra changes and you can maintain your booked services at one places easily. 
+The system includes an Angular frontend, a Go backend API, and a MySQL database. The backend seeds initial data on startup.
 
-#
+## Features
+- Browse a list of services
+- Register, log in, and manage a profile
+- Book services with date and time selection
+- View and cancel bookings
+- Service images and pricing
 
-## Technology Stack:
-* Framework : Angular
-* Backend : GoLang
-* Database : MySQL (GORM Library)
-* Version Control: Git
-* Code Editor : Visual Studio Code
+## Tech Stack
+- Frontend: Angular
+- Backend: Go
+- Database: MySQL (GORM)
 
-#
+## Prerequisites
+- Node.js LTS
+- Go (1.20+ recommended)
+- MySQL 8+
 
-## Development Methodology:
-* Each contributor pushes code in their own branch (mostly named after them).
-* A pull request is created to merge the code to `dev-{name}` branch which is our development branch.
-* After each sprint, the final code is merged with `main` branch which is our final working product.
-* A checkpoint branch is also created after each sprint for the purpose of tracking changes between two sprints.
+## Folder Structure
+- client: Angular frontend
+- server: Go API server
+- db: SQL schema and seed data
+- doc_assets: screenshots
 
-#
+## Configuration
+Update the MySQL credentials in server/config/config.go:
 
-## Sprint 4 Deliverables:
-
-The deliverables for this sprint can be found by visiting : https://github.com/rsj-rishabh/urbanClapClone/blob/master/Sprint4.md
-
-#
-
-## Project Board:
-
-Link : https://github.com/rsj-rishabh/urbanClapClone/projects/1
-
-#
-
-## API Documentation:
-Link : https://github.com/rsj-rishabh/urbanClapClone/blob/master/API%20Documentation.md
-
-#
-
-## Deployment:
-
-Frontend Link: https://urban-clap-pro.netlify.app/
-
-#
-
-## Demo (Fuctionality Video):
-
-
-https://user-images.githubusercontent.com/16275122/164362430-5eb46987-dc7d-4a94-98bf-148e63f1d99f.mp4
-
-
-#
-
-## Cypress Test (Video):
-
-
-https://user-images.githubusercontent.com/16275122/164958069-fc150286-50e5-4800-b307-08b237f611b6.MP4
-
-
-#
-
-## Backend Unit Test (Video):
-
-https://user-images.githubusercontent.com/16275122/164350003-f6675c66-d9b5-4100-8a9d-f96ca3acac1f.mp4
-
-#
-
-## Running Backend Server:
-* Clone the repository
+```go
+Username: "root"
+Password: "123456"
+Name:     "urbanClap"
 ```
-git clone https://github.com/rsj-rishabh/urbanClapClone.git
-```
-* Make sure you have mysql installed and correctly set up.
-* Create a new database in MySQL called "urbanClap" using:
-```
-mysql -u root -p
-```
-Enter mysql password, then run:
-```
-create database urbanClap;
-```
-* Goto config.go and update your mysql password
-```
-cd server/config/
-code config.go
-```
-* Now navigate to server folder and run go server:
-```
-cd ./server/
-go run main.go
-```
-Ignore any errors as it will check for required datatables (show the error), then automatically creates the datatables.
 
-#
+## Database Setup
+1. Ensure MySQL is running.
+2. Create the database:
 
-## Running Frontend Server:
-* Clone the repository
+```sql
+CREATE DATABASE urbanClap;
 ```
-git clone https://github.com/rsj-rishabh/urbanClapClone.git
+
+The backend auto-migrates tables and seeds data on startup.
+
+## Run Backend
+1. Ensure MySQL is installed and running.
+2. Create a database named "urbanClap".
+3. Update the MySQL credentials in server/config/config.go.
+4. Start the server:
+
+```bash
+cd server
+go run .
 ```
-* Install NodeJS LTS version from https://nodejs.org/en/ for your Operating System.
-* Navigate to client folder and install required libraries:
-```
-cd ./client/
+
+The API runs on http://localhost:3000.
+
+## Run Frontend
+1. Install Node.js LTS.
+2. Install dependencies:
+
+```bash
+cd client
 npm install
 ```
-* In case of any error run audit and install once more:
-```
-npm audit fix --force && npm install
-```
-* Run the Angular Server:
-```
+
+3. Start the dev server:
+
+```bash
 npm start
 ```
 
-#
+The UI runs on http://localhost:4200.
 
-## Demo (Project Screenshots):
+## API Endpoints (Common)
+- GET /api/getServices
+- POST /api/bookService
+- GET /api/getBookings/{custId}
 
-1. Home - Landing (logged out)
+## Troubleshooting
+- If the backend fails with "sql: database is closed", verify MySQL is running and credentials are correct.
+- If Angular cannot find services, ensure the backend is running and the API base URL is correct.
+- If "go" is not recognized, restart the terminal to refresh PATH.
 
-<img src="./doc_assets/final/landing.jpeg" height="480px"/>
-<br><br>
-
-2. Home - Landing (logged in)
-
-<img src="./doc_assets/final/adaptive_component.png" height="480px"/>
-<br><br>
-
-3. Signup
-
-<img src="./doc_assets/final/signup.jpeg" height="480px"/>
-<br><br>
-
-3. Signup (Validation)
-
-<img src="./doc_assets/final/validation.png" height="480px"/>
-<br><br>
-
-5. Signin
-
-<img src="./doc_assets/final/signin.jpeg" height="480px"/>
-<br><br>
-
-6. Profile
-
-<img src="./doc_assets/final/profile.jpeg" height="480px"/>
-<br><br>
-
-7. Service List
-
-<img src="./doc_assets/final/services.jpeg" height="480px"/>
-<br><br>
-
-8. Service Scheduling
-
-<img src="./doc_assets/final/schedule.jpeg" height="480px"/>
-<br><br>
-
-9. Bookings
-
-<img src="./doc_assets/final/bookings.jpeg" height="480px"/>
-<br><br>
+## Useful Scripts
+Frontend (client/package.json):
+- npm start: run dev server
+- npm test: run unit tests
+- npm run e2e: run end-to-end tests

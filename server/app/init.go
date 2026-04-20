@@ -82,6 +82,30 @@ func (a *App) DBMigrate() {
 		ImageName:   "pest_control.jpg",
 		Price:       150,
 	})
+	a.DB.Create(&model.Service{
+		Id:          6,
+		Name:        "Maid",
+		Description: "Daily home cleaning, dusting, and upkeep services.",
+		Category:    "Household",
+		ImageName:   "default.jpg",
+		Price:       120,
+	})
+	a.DB.Create(&model.Service{
+		Id:          7,
+		Name:        "Nanny",
+		Description: "Child care support with engaging activities and supervision.",
+		Category:    "Child Care",
+		ImageName:   "default.jpg",
+		Price:       200,
+	})
+	a.DB.Create(&model.Service{
+		Id:          8,
+		Name:        "Nurse",
+		Description: "At-home nursing care for basic checkups and assistance.",
+		Category:    "Health Care",
+		ImageName:   "default.jpg",
+		Price:       250,
+	})
 
 	// Create booking table
 	a.DB.Create((&model.Booking{

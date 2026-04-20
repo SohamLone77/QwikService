@@ -14,3 +14,6 @@ insert into ucc_services (name, description, category, image_name) values ('Furn
 insert into ucc_services (name, description, category) values ('Haircut', 'Fluoroscopy of Left Pulmonary Artery using H Osm Contrast', 'Personal Care');
 insert into ucc_services (name, description, category) values ('Chef', 'Drainage of R Sup Parathyroid with Drain Dev, Perc Approach', 'Catering');
 insert into ucc_services (name, description, category) values ('Nail Work', 'Alteration of Neck with Synthetic Substitute, Perc Approach', 'Personal Care');
+insert into ucc_services (name, description, category, image_name) values ('Maid', 'Daily home cleaning, dusting, and upkeep services.', 'Household', 'default.jpg');
+insert into ucc_services (name, description, category, image_name) values ('Nanny', 'Child care support with engaging activities and supervision.', 'Child Care', 'default.jpg');
+insert into ucc_services (name, description, category, image_name) values ('Nurse', 'At-home nursing care for basic checkups and assistance.', 'Health Care', 'default.jpg');

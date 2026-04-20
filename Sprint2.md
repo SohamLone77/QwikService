@@ -10,10 +10,10 @@ The user stories selected to run through the first sprint cycle are:
 #
 
 ## Responsibilities: 
-* Prateek Kumar Goel ([Github](https://github.com/pkgprateek)) - Frontend
-* Rishabh Jaiswal ([Github](https://github.com/rsj-rishabh)) - Backend
-* Raghunandhan Vaidy ([Github](https://github.com/Skillic-Kaiser)) - Frontend
-* Madhuri Uppu ([Github](https://github.com/MadhuriUppu)) - Backend
+* Redacted - Frontend
+* Redacted - Backend
+* Redacted - Frontend
+* Redacted - Backend
 
 #
 

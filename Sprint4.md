@@ -6,10 +6,10 @@ The “UrbanClapPro" web application aims to aggregate utility services such as 
 #
 
 ## Team Members: 
-* Prateek Kumar Goel ([Github](https://github.com/pkgprateek)) - Frontend
-* Rishabh Jaiswal ([Github](https://github.com/rsj-rishabh)) - Frontend & Backend
-* Raghunandhan Vaidy ([Github](https://github.com/Skillic-Kaiser)) - Frontend
-* Madhuri Uppu ([Github](https://github.com/MadhuriUppu)) - Backend
+* Redacted - Frontend
+* Redacted - Frontend & Backend
+* Redacted - Frontend
+* Redacted - Backend
 
 #
 
